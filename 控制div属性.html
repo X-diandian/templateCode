@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title>控制div属性</title>
+		<script src="https://code.jquery.com/jquery.js"></script>
+		<style type="text/css">
+			.wrop {
+				width: 300px;
+				min-height: 600px;
+				margin: 0 auto;
+			}
+			
+			.wrop .buttonWrop {
+				margin: 0 auto;
+				width: 235px;
+				margin-bottom: 20px;
+			}
+			
+			.wrop .changeContain {
+				margin: 0 auto;
+				height: 100px;
+				width: 150px;
+				background-color: black;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="wrop">
+			<div class="buttonWrop" id="buttonWrop">
+				<button id="oBtn1">变宽</button>
+				<button id="oBtn2">变高</button>
+				<button id="oBtn3">变色</button>
+				<button id="oBtn4">隐藏</button>
+				<button id="oBtn5">重置</button>
+			</div>
+			<div class="changeContain" id="changeContain">
+			</div>
+		</div>
+		<script>
+				var changeStyle = function(elem, attr, value) {
+					elem.style[attr] = value
+				};
+				window.onload = function() {
+					var oBtn = document.getElementsByTagName("button");
+					var oDiv = document.getElementById("changeContain");
+					var oAtt = ["width", "height", "background", "display", "display"];
+					var oVal = ["200px", "200px", "red", "none", "block"];
+					for(var i = 0; i < oBtn.length; i++) {
+						oBtn[i].index = i;
+						oBtn[i].onclick = function() {
+							this.index == oBtn.length - 1 && (oDiv.style.cssText = "");//重置css
+							changeStyle(oDiv, oAtt[this.index], oVal[this.index])
+						}
+					}
+					
+				};
+				
+
+		</script>
+	</body>
+
+</html>
