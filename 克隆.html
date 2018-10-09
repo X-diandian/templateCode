@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>克隆</title>
+	</head>
+
+	<body>
+		<!--克隆份两种类型，简单类型，引用类型-->
+		<script>
+			//简单类型，直接赋值,赋值对象与原生对象互补影响
+			var a = 1;
+			var b = a;
+			console.log(a);
+			console.log(b);
+			var b = 3;
+			console.log(a);
+			console.log(b);
+
+			//引用类型，对象赋值，赋值对象与原生对象共享数据
+			var obj1 = new Object();
+			var obj2 = obj1;
+			obj1.name = '111';
+			console.log(obj2); //name='111'
+
+			//函数传值
+			function addTen(num) {
+				num += 10;
+				return num;
+			}
+			var count = 20;
+			var result = addTen(count);
+			alert(count); //20，没有变化
+			alert(result); //30
+			
+			//深度克隆
+			
+		</script>
+		
+	</body>
+
+</html>
