@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+</head>
+<body>
+<script type="text/javascript">
+
+
+    window.onload = function () {
+        // function Point(x, y) {
+        // 	this.x = x;
+        // 	this.y = y;
+        // }
+        //
+        // Point.prototype.toString = function () {
+        // 	return '(' + this.x + ', ' + this.y + ')';
+        // };
+        //
+        // var p = new Point(1, 2);
+        // console.log(p);
+
+        // var b= new point(1,1);
+        // var bs= new point(12,13);
+        // console.log(b+bs);
+
+
+        function constructor(qq,name) {
+            // var obj=new Object();
+            this.qq=qq;
+            this.name=name;
+            this.show=function (){
+                console.log(this.name+":"+this.qq);
+            }
+            // return obj
+        }
+
+        var obj=new constructor("1232323","张三");
+        var obj1=new  constructor("1232323","李四");
+        console.log(obj);
+        console.log(obj1);
+
+        // class Point{
+        //    constructor(qq,name){
+        //        this.qq=qq;
+        //        this.name=name;
+        //        this.show=function (){
+        //            console.log(this.name+":"+this.qq);
+        //        }
+        //    }
+        // }
+        //
+        // var obj9=new Point();
+        // console.log(obj9.constructor("999","zhangsan"))
+        class Bar1 {
+            constructor(qq,name){
+                this.qq=qq;
+                this.name=name;
+            }
+            doStuffss() {
+                return  this.name+":"+this.qq;
+            }
+        }
+
+        class Bar {
+            constructor(qq,name){
+                this.qq=qq;
+                this.name=name;
+            }
+            doStuffss() {
+              return  this.name+":"+this.qq;
+            }
+        }
+
+        var b = new Bar("999","你好");
+        console.log(b.doStuffss());//张三:999
+        console.log(b.doStuffss);//ƒ doStuffss() {return  this.name+":"+this.qq;}
+
+        class childBar extends Bar{
+            constructor(qq,name,color){
+                super(qq,name);
+                this.color=color;
+            }
+            toString() {
+                return this.color + ' ' + super.doStuffss()+this.name; // 调用父类的toString()
+            }
+        }
+        var newst=new childBar("9999","username","red");
+        console.log(newst.toString());//red [object Object]
+
+        console.log(Object.getPrototypeOf(childBar) === Bar)///true
+        console.log(Object.getPrototypeOf(childBar) === Bar1)///false
+
+    }//wind end
+
+</script>
+</body>
+</html>
