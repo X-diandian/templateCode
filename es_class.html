@@ -92,7 +92,30 @@
         console.log(Object.getPrototypeOf(childBar) === Bar)///true
         console.log(Object.getPrototypeOf(childBar) === Bar1)///false
 
+
+
+
+        //第二天复盘
+        //类
+        class analyse{
+            constructor(qq,name){
+                this.qq=qq;
+                this.name=name;
+            }
+            toSring(){
+                console.log(this.qq+":"+"张三")
+            }
+        }
+        var news11=new analyse("9784","张三");
+        // console.log(news11);
+        news11.toSring()
+
+
+
     }//wind end
+
+
+
 
 </script>
 </body>
