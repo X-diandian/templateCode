@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>promise用法</title>
+</head>
+<body>
+
+<!--异步：操作之间没有关系=》同时进行多个操作/代码复杂-->
+<!--同步：操作并行，（一起去厕所），只能一个进行/代码简单-->
+<!--promise消除异步操作-->
+<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+<script type="text/javascript">
+
+//    let promise = new Promise(function(resolve, reject) {
+//        console.log('Promise');
+//        resolve();
+//    });
+//
+//    promise.then(function() {
+//        console.log('resolved.');
+//    });
+//
+//    let p=new Promise(function (resolve,reject) {
+//
+//    })
+
+    let promise1 = new Promise(function(resolve, reject) {
+        setTimeout(function() {
+            resolve('foo');
+        }, 3000);
+    });
+
+    promise1.then(function(value) {
+        console.log(value);
+        // expected output: "foo"
+    });
+
+    console.log(promise1);
+
+
+//    promise 用来执行一些异步操作
+
+
+</script>
+</body>
+</html>
