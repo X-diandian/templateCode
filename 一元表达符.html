@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>一元操作符</title>
+</head>
+<body>
+
+<from></from>
+    <input id="names" type="text" value="1111" >
+    <button id="btn">获取name</button>
+
+<script type="text/javascript" >
+
+    let btn=document.getElementById("btn");
+    btn.onclick=function(){
+        let names=document.getElementById("names").value;
+
+    }
+
+    let age=29;
+    age++;
+    console.log(age)
+    let  anotherAge=--age+2;
+    console.log(anotherAge);
+//一元操作符分为前置型（++age）与后置型（age++）
+
+    var num1 = 2;
+    var num2 = 20;
+    var num3 = --num1 + num2;
+    console.log(num3)
+    console.log(num1)
+    var num4 = num1 + num2;
+    console.log(num4)
+
+//  Math=>  max与min
+    let max =Math.max(12,343,545,456,3);
+    let min =Math.min(12,343,545,456,3);
+    console.log(max)
+    console.log(min)
+
+    function  SuperType() {
+        this.colors = ["red", "blue", "green"];
+    }
+    function SupType() {
+        SuperType.call(this);
+    }
+
+    var lonse1=new SupType();
+    lonse1.colors.push("block");
+    console.log(lonse1)
+
+    var lonse2=new SuperType();
+    console.log(lonse2);
+
+
+
+</script>
+</body>
+
+</html>

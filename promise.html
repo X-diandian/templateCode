@@ -12,56 +12,6 @@
 <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
 
 <script type="text/javascript">
-    // function runAsync1(){
-    //     var p = new Promise(function(resolve, reject){
-    //         //做一些异步操作
-    //         setTimeout(function(){
-    //             console.log('异步任务1执行完成');
-    //             resolve('随便什么数据1');
-    //         }, 3000);
-    //     });
-    //     return p;
-    // }
-    // function runAsync2(){
-    //     var p = new Promise(function(resolve, reject){
-    //         //做一些异步操作
-    //         setTimeout(function(){
-    //             console.log('异步任务2执行完成');
-    //             resolve('随便什么数据2');
-    //         }, 2000);
-    //     });
-    //     return p;
-    // }
-    // function runAsync3(){
-    //     var p = new Promise(function(resolve, reject){
-    //         //做一些异步操作
-    //         setTimeout(function(){
-    //             console.log('异步任务3执行完成');
-    //             resolve('随便什么数据3');
-    //         }, 2000);
-    //     });
-    //     return p;
-    // }
-    //
-    // runAsync1()
-    // runAsync2()
-    // runAsync3()
-    //
-    //
-    // runAsync1().then(function (data) {
-    //     console.log("data1"+data)
-    //     return runAsync2();
-    // }).then(function (data) {
-    //     console.log("data2"+data)
-    //     return '直接返回数据';
-    // }).then(function (data) {
-    //     console.log("data3"+data)
-    // })
-
-//  promise 用来执行一些异步操作，通过设置时间来执行方法，达到异步操作的过程
-//
-
-
     function getNumber(){
         let p = new Promise(function(resolve, reject){
             //做一些异步操作
