@@ -16,8 +16,38 @@
 
 <script type="text/javascript">
 
+    //    获取局部变量：1.把变量变成全局 2.return然后赋值
+    var mesh;
+    function test() {
+        mesh="hi"
+    }
+    test()
+    console.log(mesh);
 
-//promise
+    function test1() {
+        mesh="hi"
+        return mesh
+    }
+    var a= test1();
+    console.log(a)
+
+
+    //函数可以传多少参数，并可以用arguments.length获取参数的个数
+    function sayHi(name,age) {     console.log("Hello " + arguments[0] + "," + arguments[1]); }
+    sayHi();
+
+    function howManyArgs() {     console.log(arguments.length); }
+    howManyArgs("string", 45,"undefined","Boolean");  //2
+    howManyArgs();              //0
+    howManyArgs(12);
+
+    function doAdd() {     if(arguments.length == 1) {         alert(arguments[0] + 10);     } else if (arguments.length == 2) {         alert(arguments[0] + arguments[1]);     } }
+    doAdd(23,345,456);        //20
+    // doAdd(30, 20);     //50
+
+
+
+
 
 
 
